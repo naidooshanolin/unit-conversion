@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "00a2a70d-e1ff-4151-82d5-19a6b4d0188a",
+		"name": "Unit Conversion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Convert inch to mm",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Quantity is 25.4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(25.4).to.eql(jsonData.quantity);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/convert-unit?sourceUnit=inch&destinationUnit=mm&quantity=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"convert-unit"
+					],
+					"query": [
+						{
+							"key": "sourceUnit",
+							"value": "inch"
+						},
+						{
+							"key": "destinationUnit",
+							"value": "mm"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert foot to cm",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Quantity is 30.48\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(30.48).to.eql(jsonData.quantity);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/convert-unit?sourceUnit=foot&destinationUnit=cm&quantity=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"convert-unit"
+					],
+					"query": [
+						{
+							"key": "sourceUnit",
+							"value": "foot"
+						},
+						{
+							"key": "destinationUnit",
+							"value": "cm"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert yard to meter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Quantity is 0.9144\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(0.9144).to.eql(jsonData.quantity);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/convert-unit?sourceUnit=yard&destinationUnit=m&quantity=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"convert-unit"
+					],
+					"query": [
+						{
+							"key": "sourceUnit",
+							"value": "yard"
+						},
+						{
+							"key": "destinationUnit",
+							"value": "m"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert celsius to fahrenheit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Quantity is 32\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(32).to.eql(jsonData.quantity);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/convert-unit?sourceUnit=celsius&destinationUnit=fahrenheit&quantity=0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"convert-unit"
+					],
+					"query": [
+						{
+							"key": "sourceUnit",
+							"value": "celsius"
+						},
+						{
+							"key": "destinationUnit",
+							"value": "fahrenheit"
+						},
+						{
+							"key": "quantity",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
